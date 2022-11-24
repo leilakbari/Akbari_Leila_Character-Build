@@ -1,0 +1,262 @@
+/*these all apply to the body element -> global rules */
+
+* {
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(92, 95, 100);
+  color: white;
+  background-image: url("../img/denim.jpg");
+}
+
+/* main header rules */
+
+header {
+  background-color: #095767;
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+
+#main-logo {
+  width: 300px;
+  padding: 10px 0;
+}
+
+/*main rules here */
+#character_nav {
+  text-align: center;
+  background-color: #4a471d;
+  height: 500px;
+
+  background-image: url("../img/brave-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-blend-mode: multiply;
+}
+
+.characters {
+  list-style-type: none;
+}
+
+.characters li {
+  position: relative;
+  display: inline-block;
+  height: 220px;
+  margin: 10px 8px;
+
+  background-color: black;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.characters li h5 {
+  position: relative;
+  color: white;
+  padding: 12px 8px;
+
+  z-index: 500;
+}
+
+.characters li a {
+  text-decoration: none;
+}
+
+.characters li img {
+  width: 150px;
+  cursor: pointer;
+}
+
+.blue_bumper {
+  width: 100%;
+  height: 6px;
+  background-color: #026477;
+
+  transition: height 0.2s ease;
+
+  position: absolute;
+}
+
+.characters li:hover .blue_bumper {
+  height: 70px;
+}
+
+article {
+  padding: 20px;
+}
+
+/* select the h3 tag inside the article tag on the page */
+/* a selector followed by a space and then ANOTHER selector gets a reference to the element and then the child element or elements inside of it */
+article h3 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 14px;
+  color: #07404c;
+}
+
+/* select the p tag inside the article tag on the page */
+article p {
+  width: 80%;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 auto;
+  color: #07404c;
+}
+
+.sprite {
+  width: 150px;
+  height: 150px;
+
+  background-image: url("../img/brave-characters.jpg");
+}
+
+.sprite:hover {
+  background-position-y: -150px !important;
+}
+
+#mother {
+  background-position: -150px 0;
+}
+#dad {
+  background-position: -300px 0;
+}
+#brothers {
+  background-position: -450px 0;
+}
+#witch {
+  background-position: -600px 0;
+}
+#friends {
+  background-position: -750px 0;
+}
+
+/* footer rules here */
+footer {
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.sticky_footer {
+  position: sticky;
+  top: 100%;
+
+  height: 80px;
+  background-color: #095767;
+}
+
+/*lightbox rules here*/
+
+.lightbox {
+  width: 100vw; /* viewport width => screen width */
+  height: 100vh; /* viewport hight => screen hight */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.85);
+  background-image: url("../img/Merida_disney.png");
+  background-repeat: no-repeat;
+
+  background-size: 55vh; /* 55% of the viewport height */
+  background-position: 40px bottom;
+
+  z-index: 5000;
+
+  display: none;
+}
+
+#lightbox1 {
+  background-image: url("../img/Merida_disney.png");
+  background-position: 130px 50px;
+  background-size: 390px 800px;
+} 
+
+#lightbox2 {
+  background-image: url("../img/brave-mother.png");
+  background-position: 70px 70px;
+  background-size: 430px 750px;
+} 
+
+#lightbox3 {
+  background-image: url("../img/brave-dad.png");
+  background-position: 70px 100px;
+} 
+
+#lightbox4 {
+  background-image: url("../img/brave-brothers.png");
+  background-position: 150px 40px;
+  background-size: 300px 800px;
+} 
+
+#lightbox5 {
+  background-image: url("../img/brave-witch.png");
+  background-position: 70px 200px;
+}
+
+#lightbox6 {
+  background-image: url("../img/brave-friends.png");
+  background-position: 180px 60px;
+  background-size: 250px 800px;
+}
+
+.lightbox_close {
+  position: relative;
+  top: 20px;
+  left: 95%;
+
+  color: white;
+  font-size: 3em;
+
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.lightbox_close:hover {
+  opacity: 0.5;
+  color: #0c798f;
+}
+
+.lightbox article {
+  width: 55%;
+  margin-left: 40%;
+  padding-top: 50px;
+}
+
+.lb_text,
+.lb_heading {
+  text-align: left;
+  color: white;
+}
+
+.lb_text {
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
+  color: white;
+}
+
+/* Turn the lightbox on using the  :target pseudo selector */
+
+.lightbox:target {
+  display: block;
+}
